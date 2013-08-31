@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>Winestore search results</title>
+</head>
+
+<body>
+<!-- $BeginBlock session_block -->
+${session_button}
+<!-- $EndBlock session_block -->
+
+<!-- $BeginBlock wine_block -->
+${wine_button}
+<!-- $EndBlock wine_block -->
+
+<table>
+<!-- $BeginBlock table_block -->
+<tr>
+<td>Name </td>
+<td>Grape Variety </td>
+<td>Year </td>
+<td>Winery </td>
+<td>Region </td>
+<td>Cost of the wine in the inventory </td>
+<td>Total number of bottles available at any price </td>
+<td>Total stock sold of the wine </td>
+<td>Total sales revenue for the wine </td>
+</tr>
+<!-- $EndBlock table_block -->
+
+<!-- $BeginBlock results_block -->
+<tr>
+   <td>${wine_name}</td>
+   <td>${variety}</td>
+   <td>${year}</td>
+   <td>${winery_name}</td>
+   <td>${region_name}</td>
+   <td>${cost}</td>
+   <td>${on_hand}</td>
+   <td>${orders}</td>
+   <td>${totalprice}</td>
+</tr>
+<!-- $EndBlock results_block -->
+
+</table>
+</body>
+</html>

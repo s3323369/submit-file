@@ -1,0 +1,80 @@
+<html>
+<head>
+<title>Search Wine Database</title>
+</head>
+<body>
+
+
+<table>
+<tr>
+   <td><strong>Winestore Database</strong></td>
+</tr>
+
+<form action="resultScreen.php" method="GET">
+	
+<tr>
+   <td>1. Wine Name: </td>
+   <td> <input type="text" name="wineName"</td>
+</tr>
+
+<tr>
+   <td>2. Winery Name:</td>
+   <td> <input type="text" name="wineryName"</td>
+</tr>   
+
+<tr>
+   <td>3. Region:</td>
+   <td> <select name="regionTable">
+   <!-- $BeginBlock region_block -->     
+      <option>${region}</option>
+   <!-- $EndBlock region_block -->
+   </select></td>
+</tr>
+
+<tr>
+   <td>4. Grape Variety: </td>
+   <td> <select name="grapeTable">
+   <option value="All">All</option>
+   <!-- $BeginBlock grape_block -->
+      <option value=${variety_id}>${grape_variety}</option>
+   <!-- $EndBlock grape_block -->
+   </select></td>
+</tr>
+
+<tr>
+   <td>5. Year from: <select name="minYearTable">
+   <!-- $BeginBlock lowerYear_block -->
+      <option>${lowerYear}</option>';
+   <!-- $EndBlock lowerYear_block -->
+   </select></td>
+
+   <td>to: <select name="maxYearTable">
+   <!-- $BeginBlock upperYear_block -->		   
+   <option>${upperYear}</option>';
+   <!-- $EndBlock upperYear_block -->
+   </select></td>
+</tr>
+
+<tr>
+   <td>6. Minimum number of wines in stock(per wine):</td>
+   <td> <input type="text" name="minStock"></td>
+<tr>
+   <td>7. Minimum number of wines ordered(per wine):</td>
+   <td> <input type="text" name="minOrdered"></td>
+</tr>
+<tr>
+   <td>8a. Min Cost(optional): </td>
+   <td> <input type="text" name="minCost"></td>
+</tr>
+<tr>
+   <td>8b. Max Cost(optional): </td>
+   <td> <input type="text" name="maxCost"></td>
+</tr>
+<tr>
+   <td><input type="submit" name="submit" value="search"></td>
+</tr>
+
+</form>
+</table>
+</body>
+</html>
